@@ -45,8 +45,10 @@
 
     <!-- Hero Section -->
     <header class="relative h-screen min-h-[600px] flex items-center justify-center bg-slate-900 overflow-hidden">
-        <!-- CONCEPT ART PLACEHOLDER: Main Hero Image (BWB Aircraft in snowy landscape) -->
-        <div class="absolute inset-0 bg-[url('https://placehold.co/1920x1080/1e293b/white?text=Concept+Art:+BWB+Aircraft+in+Snow')] bg-cover bg-center opacity-40"></div>
+        <!-- CONCEPT ART: Hero Image -->
+        <div class="absolute inset-0 bg-[url('assets/hero.jpg')] bg-cover bg-center opacity-40"></div>
+        <!-- Fallback if image missing -->
+        <div class="absolute inset-0 bg-slate-900 -z-10"></div>
         
         <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
             <h1 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
@@ -118,21 +120,15 @@
                     </ul>
                 </div>
                 <div class="order-1 md:order-2 h-80 bg-slate-800 rounded-lg flex items-center justify-center border border-slate-700 relative overflow-hidden">
-                    <!-- CONCEPT ART PLACEHOLDER: Power Pallet System Diagram -->
-                    <div class="text-slate-500 text-center">
-                        <i class="fa-solid fa-gear text-6xl mb-4"></i>
-                        <p>Insert Concept Art:<br>Power Pallet Cutaway</p>
-                    </div>
+                    <!-- CONCEPT ART: Power Pallet System Diagram -->
+                    <img src="assets/power-pallet.jpg" alt="Power Pallet Cutaway" class="w-full h-full object-cover">
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
                 <div class="h-80 bg-slate-800 rounded-lg flex items-center justify-center border border-slate-700 relative overflow-hidden">
-                    <!-- CONCEPT ART PLACEHOLDER: Battery Tech -->
-                    <div class="text-slate-500 text-center">
-                        <i class="fa-solid fa-battery-full text-6xl mb-4"></i>
-                        <p>Insert Concept Art:<br>Sodium-Ion Cell Structure</p>
-                    </div>
+                    <!-- CONCEPT ART: Battery Tech -->
+                    <img src="assets/sodium-ion.jpg" alt="Sodium-Ion Battery Tech" class="w-full h-full object-cover">
                 </div>
                 <div>
                     <div class="flex items-center mb-6">
@@ -158,11 +154,8 @@
                     </p>
                 </div>
                 <div class="order-1 md:order-2 h-80 bg-slate-800 rounded-lg flex items-center justify-center border border-slate-700 relative overflow-hidden">
-                    <!-- CONCEPT ART PLACEHOLDER: Landing Gear / Gravel Strip Landing -->
-                    <div class="text-slate-500 text-center">
-                        <i class="fa-solid fa-road text-6xl mb-4"></i>
-                        <p>Insert Concept Art:<br>Gravel Strip Landing</p>
-                    </div>
+                    <!-- CONCEPT ART: Landing Gear / Gravel Strip Landing -->
+                    <img src="assets/gravel-landing.jpg" alt="Gravel Strip Landing" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
