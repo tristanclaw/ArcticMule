@@ -27,6 +27,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
 <body class="bg-arctic-light text-slate-800 antialiased">
@@ -43,7 +45,7 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Kept as requested) -->
     <header class="relative h-screen min-h-[600px] flex items-center justify-center bg-slate-900 overflow-hidden">
         <!-- CONCEPT ART: Hero Image -->
         <div class="absolute inset-0 bg-[url('assets/hero.jpg')] bg-cover bg-center opacity-40"></div>
@@ -64,179 +66,263 @@
         </div>
     </header>
 
-    <!-- The Problem -->
-    <section class="py-20 bg-white">
+    <!-- SECTION 1: THE AIRFRAME -->
+    <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-xs font-bold tracking-widest text-slate-500 uppercase mb-2">Why We Exist</h2>
-                <h3 class="text-3xl md:text-4xl font-bold text-slate-900">Built Where Others Freeze</h3>
+                <h2 class="text-sm font-bold tracking-widest text-arctic-orange uppercase mb-2">The Architecture</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-slate-900">Aerodynamics Meets Durability</h3>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-12">
-                <!-- Card 1 -->
-                <div class="bg-slate-50 p-8 rounded-lg border-l-4 border-arctic-orange shadow-sm hover:shadow-md transition">
-                    <div class="text-arctic-orange text-4xl mb-6"><i class="fa-solid fa-temperature-low"></i></div>
-                    <h4 class="text-xl font-bold mb-4">Electric Failed the Cold</h4>
+                <!-- BWB Advantage -->
+                <div class="bg-slate-50 rounded-xl p-8 border border-slate-100 hover:shadow-xl transition duration-300">
+                    <div class="h-16 w-16 bg-slate-900 rounded-full flex items-center justify-center mb-6 text-white text-2xl">
+                        <i class="fa-solid fa-plane-up"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-slate-900">Blended Wing Body</h4>
                     <p class="text-slate-600 leading-relaxed">
-                        Lithium batteries die at -40°C. Our Sodium-Ion tech doesn't. We maintain range when the mercury drops.
+                        Traditional "tube and wing" fuselages waste space. Our BWB design integrates the cargo hold into the lifting body itself, providing <strong>40% more internal volume</strong> than standard bush planes.
                     </p>
                 </div>
-                <!-- Card 2 -->
-                <div class="bg-slate-50 p-8 rounded-lg border-l-4 border-slate-900 shadow-sm hover:shadow-md transition">
-                    <div class="text-slate-900 text-4xl mb-6"><i class="fa-solid fa-charging-station"></i></div>
-                    <h4 class="text-xl font-bold mb-4">Airports Are Rare</h4>
+
+                <!-- Gravel Protection -->
+                <div class="bg-slate-50 rounded-xl p-8 border border-slate-100 hover:shadow-xl transition duration-300">
+                    <div class="h-16 w-16 bg-arctic-orange rounded-full flex items-center justify-center mb-6 text-white text-2xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-slate-900">Gravel Protection</h4>
                     <p class="text-slate-600 leading-relaxed">
-                        Standard electric planes need superchargers. We bring our own "Power Pallet" generator. Charge anywhere.
+                        Rear-mounted pusher propellers are physically shielded from gravel spray by the broad wing body. This drastic reduction in FOD (Foreign Object Debris) saves thousands in prop maintenance on rough strips.
                     </p>
                 </div>
-                <!-- Card 3 -->
-                <div class="bg-slate-50 p-8 rounded-lg border-l-4 border-arctic-orange shadow-sm hover:shadow-md transition">
-                    <div class="text-arctic-orange text-4xl mb-6"><i class="fa-solid fa-plane-slash"></i></div>
-                    <h4 class="text-xl font-bold mb-4">Tube Planes are Inefficient</h4>
+
+                <!-- Loading Ramp -->
+                <div class="bg-slate-50 rounded-xl p-8 border border-slate-100 hover:shadow-xl transition duration-300">
+                    <div class="h-16 w-16 bg-slate-900 rounded-full flex items-center justify-center mb-6 text-white text-2xl">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-slate-900">The Loading Ramp</h4>
                     <p class="text-slate-600 leading-relaxed">
-                        Our Blended Wing Body carries 40% more volume than standard bush planes. Pallets, not just packages.
+                        No more hand-bombing boxes through a side door. Our <strong>2-pallet wide rear ramp</strong> is designed for forklifts and drive-on cargo, accommodating snowmobiles and quads with ease.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Technology -->
-    <section class="py-20 bg-slate-900 text-white">
+    <!-- SECTION 2: THE POWERTRAIN DEEP DIVE (Tri-Brid) -->
+    <section class="py-24 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
-                <div class="order-2 md:order-1">
-                    <div class="flex items-center mb-6">
-                        <span class="bg-arctic-orange w-12 h-1 mr-4"></span>
-                        <h3 class="text-2xl font-bold uppercase tracking-wider">The Power Pallet</h3>
-                    </div>
-                    <h2 class="text-4xl font-black mb-6">Mission Flexibility Redefined</h2>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
-                        A modular, slide-in turbogenerator. Fly pure electric for short hops, or slide in the generator for 600nm range. Refuel with Jet-A or Diesel anywhere.
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-arctic-orange mr-3"></i> 5-Minute Swap Time</li>
-                        <li class="flex items-center text-slate-300"><i class="fa-solid fa-check text-arctic-orange mr-3"></i> Multi-Fuel Compatible</li>
-                    </ul>
-                </div>
-                <div class="order-1 md:order-2 h-80 bg-slate-800 rounded-lg flex items-center justify-center border border-slate-700 relative overflow-hidden">
-                    <!-- CONCEPT ART: Power Pallet System Diagram -->
-                    <img src="assets/power-pallet.jpg" alt="Power Pallet Cutaway" class="w-full h-full object-cover">
-                </div>
+            <div class="text-center mb-20">
+                <h2 class="text-sm font-bold tracking-widest text-arctic-orange uppercase mb-2">Propulsion</h2>
+                <h3 class="text-4xl md:text-5xl font-black">The Tri-Brid Architecture</h3>
+                <p class="mt-4 text-slate-400 max-w-2xl mx-auto text-lg">
+                    Three power sources working in unison to conquer range anxiety and extreme cold.
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
-                <div class="h-80 bg-slate-800 rounded-lg flex items-center justify-center border border-slate-700 relative overflow-hidden">
-                    <!-- CONCEPT ART: Battery Tech -->
-                    <img src="assets/sodium-ion.jpg" alt="Sodium-Ion Battery Tech" class="w-full h-full object-cover">
-                </div>
-                <div>
-                    <div class="flex items-center mb-6">
-                        <span class="bg-arctic-orange w-12 h-1 mr-4"></span>
-                        <h3 class="text-2xl font-bold uppercase tracking-wider">Sodium-Ion Core</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1: Sodium-Ion Core -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-arctic-orange transition duration-300 flex flex-col">
+                    <div class="h-48 overflow-hidden bg-slate-950 relative">
+                         <!-- Image Inserted Here -->
+                        <img src="assets/sodium-ion.jpg" alt="Sodium-Ion Battery Technology" class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-blue-500/20 text-blue-300 border border-blue-500/50 px-3 py-1 text-xs font-bold uppercase tracking-wider rounded">
+                            Chemistry
+                        </div>
                     </div>
-                    <h2 class="text-4xl font-black mb-6">Cold Soak Survivor</h2>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
-                        The only battery chemistry that survives Arctic cold soaks. No heated hangars required. Park it outside at -40°C, wake it up, and fly.
-                    </p>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-2xl font-bold mb-2">Sodium-Ion Core</h4>
+                        <div class="text-sm text-slate-400 mb-6 font-mono">200 kWh Integrated Pack</div>
+                        <p class="text-slate-300 mb-6 flex-1">
+                            The only battery chemistry that survives Arctic cold soaks. Can sit at -40°C indefinitely without permanent damage.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-400">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-arctic-orange mt-1 mr-3"></i> No heated hangars required</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-arctic-orange mt-1 mr-3"></i> Safely discharges to 0V</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1">
-                    <div class="flex items-center mb-6">
-                        <span class="bg-arctic-orange w-12 h-1 mr-4"></span>
-                        <h3 class="text-2xl font-bold uppercase tracking-wider">Gravel Runner</h3>
+                <!-- Card 2: Power Pallet -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-arctic-orange transition duration-300 flex flex-col transform md:-translate-y-4 shadow-2xl shadow-black/50">
+                    <div class="h-48 overflow-hidden bg-slate-950 relative">
+                         <!-- Image Inserted Here -->
+                        <img src="assets/power-pallet.jpg" alt="Power Pallet Generator" class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-500">
+                        <div class="absolute top-4 left-4 bg-arctic-orange/20 text-arctic-orange border border-arctic-orange/50 px-3 py-1 text-xs font-bold uppercase tracking-wider rounded">
+                            Range Extender
+                        </div>
                     </div>
-                    <h2 class="text-4xl font-black mb-6">Rough Field Ready</h2>
-                    <p class="text-slate-400 text-lg leading-relaxed mb-8">
-                        High-lift wing, pusher props protected from debris, and rugged tundra tires for 2,500ft airstrips. If there's a strip, we can land.
-                    </p>
+                    <div class="p-8 flex-1 flex flex-col bg-slate-750">
+                        <h4 class="text-2xl font-bold mb-2">The Power Pallet</h4>
+                        <div class="text-sm text-slate-400 mb-6 font-mono">150kW Modular Turbogenerator</div>
+                        <p class="text-slate-300 mb-6 flex-1">
+                            A slide-in generator that fits the nose cargo slot. Turns the plane into a hybrid, extending range from 200nm to 600nm.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-400">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-arctic-orange mt-1 mr-3"></i> <strong>Omni-Fuel:</strong> Jet-A, Diesel #1, Kerosene</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-arctic-orange mt-1 mr-3"></i> 15-min "Splash & Dash" turnarounds</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="order-1 md:order-2 h-80 bg-slate-800 rounded-lg flex items-center justify-center border border-slate-700 relative overflow-hidden">
-                    <!-- CONCEPT ART: Landing Gear / Gravel Strip Landing -->
-                    <img src="assets/gravel-landing.jpg" alt="Gravel Strip Landing" class="w-full h-full object-cover">
+
+                <!-- Card 3: Solar Skin -->
+                <div class="bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-arctic-orange transition duration-300 flex flex-col">
+                    <div class="h-48 bg-slate-950 flex items-center justify-center relative">
+                        <i class="fa-solid fa-solar-panel text-6xl text-slate-600"></i>
+                         <div class="absolute top-4 left-4 bg-yellow-500/20 text-yellow-300 border border-yellow-500/50 px-3 py-1 text-xs font-bold uppercase tracking-wider rounded">
+                            Auxiliary
+                        </div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h4 class="text-2xl font-bold mb-2">Solar Skin</h4>
+                        <div class="text-sm text-slate-400 mb-6 font-mono">10kW Nominal Thin-Film</div>
+                        <p class="text-slate-300 mb-6 flex-1">
+                            Flexible solar array bonded directly to the upper fuselage. Covers all "Hotel Loads" (Avionics, De-icing, Heat) during daylight.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-400">
+                            <li class="flex items-start"><i class="fa-solid fa-check text-arctic-orange mt-1 mr-3"></i> Self-sustaining microgrid on ground</li>
+                            <li class="flex items-start"><i class="fa-solid fa-check text-arctic-orange mt-1 mr-3"></i> Zero battery drain while parked</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Specs Section -->
-    <section id="specs" class="py-20 bg-slate-50">
+    <!-- SECTION 3: SNOWBIRD STRATEGY -->
+    <section class="py-24 bg-white">
+         <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <h2 class="text-sm font-bold tracking-widest text-arctic-orange uppercase mb-2">Business Model</h2>
+                    <h3 class="text-4xl md:text-5xl font-black text-slate-900 mb-6">One Airframe.<br>Two Chemistries.</h3>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        Aviation is seasonal. Your battery shouldn't limit where you fly. We designed the Mule to swap its core energy storage based on the mission environment.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded bg-blue-100 text-blue-600 flex items-center justify-center font-bold"><i class="fa-regular fa-snowflake"></i></div>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-xl font-bold text-slate-900">Winter Mode (The North)</h4>
+                                <p class="text-slate-600 mt-1">Uses <strong>Sodium-Ion</strong> packs for extreme reliability and safety. No thermal runaway risk, perfect for unattended parking in -40°C.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                             <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded bg-orange-100 text-orange-600 flex items-center justify-center font-bold"><i class="fa-solid fa-sun"></i></div>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-xl font-bold text-slate-900">Summer Mode (The South)</h4>
+                                <p class="text-slate-600 mt-1">Swap to <strong>Lithium-Ion</strong> packs for the Caribbean season. Doubles payload capacity (up to 2,200kg) when cold is not a factor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 relative">
+                    <!-- Placeholder for Map or Strategy visual -->
+                    <div class="bg-slate-100 rounded-2xl p-8 border border-slate-200">
+                        <div class="flex justify-between items-center text-center text-slate-400 font-mono text-sm mb-8">
+                            <span>YELLOWKNIFE <br> (-35°C)</span>
+                            <i class="fa-solid fa-arrow-right-arrow-left text-slate-300"></i>
+                            <span>NASSAU <br> (+30°C)</span>
+                        </div>
+                         <div class="aspect-video bg-slate-200 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-earth-americas text-6xl text-slate-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- SECTION 4: ECONOMIC COMPARISON -->
+    <section class="py-24 bg-slate-50 border-y border-slate-200" id="specs">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
-                 <h2 class="text-4xl font-black text-slate-900 mb-4">Technical Specifications</h2>
-                 <p class="text-slate-500">Model BWB-1 "Arctic Mule"</p>
+                 <h2 class="text-4xl font-black text-slate-900 mb-4">The Cost of Operation</h2>
+                 <p class="text-slate-500">Why the status quo is obsolete.</p>
             </div>
-            
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden border border-slate-200">
-                <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-                    <div class="p-8">
-                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Performance</h3>
-                        <dl class="space-y-6">
-                            <div class="flex justify-between items-end border-b border-dotted border-slate-300 pb-2">
-                                <dt class="text-slate-600 font-medium">Range (Hybrid)</dt>
-                                <dd class="text-2xl font-bold text-slate-900">600 nm <span class="text-sm text-slate-400 font-normal">/ 1,100 km</span></dd>
-                            </div>
-                            <div class="flex justify-between items-end border-b border-dotted border-slate-300 pb-2">
-                                <dt class="text-slate-600 font-medium">Range (Electric)</dt>
-                                <dd class="text-2xl font-bold text-slate-900">200 nm <span class="text-sm text-slate-400 font-normal">/ 370 km</span></dd>
-                            </div>
-                            <div class="flex justify-between items-end border-b border-dotted border-slate-300 pb-2">
-                                <dt class="text-slate-600 font-medium">Cruise Speed</dt>
-                                <dd class="text-2xl font-bold text-slate-900">180 kts</dd>
-                            </div>
-                            <div class="flex justify-between items-end border-b border-dotted border-slate-300 pb-2">
-                                <dt class="text-slate-600 font-medium">Runway Req.</dt>
-                                <dd class="text-2xl font-bold text-slate-900">2,500 ft <span class="text-sm text-slate-400 font-normal">/ Gravel</span></dd>
-                            </div>
-                        </dl>
-                    </div>
-                    <div class="p-8 bg-slate-50">
-                        <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6">Capacity & Power</h3>
-                        <dl class="space-y-6">
-                            <div class="flex justify-between items-end border-b border-dotted border-slate-300 pb-2">
-                                <dt class="text-slate-600 font-medium">Payload</dt>
-                                <dd class="text-2xl font-bold text-slate-900">1,200 kg <span class="text-sm text-slate-400 font-normal">/ 2,650 lbs</span></dd>
-                            </div>
-                             <div class="flex justify-between items-end border-b border-dotted border-slate-300 pb-2">
-                                <dt class="text-slate-600 font-medium">Cargo Volume</dt>
-                                <dd class="text-2xl font-bold text-slate-900">2 Pallets <span class="text-sm text-slate-400 font-normal">/ Standard</span></dd>
-                            </div>
-                            <div class="mt-8">
-                                <dt class="text-slate-600 font-medium mb-2">Propulsion</dt>
-                                <dd class="text-lg font-bold text-slate-900 bg-white p-4 rounded border border-slate-200">
-                                    <div class="mb-2"><i class="fa-solid fa-bolt text-arctic-orange mr-2"></i> 2x 300kW Electric Motors</div>
-                                    <div><i class="fa-solid fa-gas-pump text-slate-500 mr-2"></i> 150kW Turbogenerator</div>
-                                </dd>
-                            </div>
-                        </dl>
-                    </div>
-                </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full bg-white shadow-xl rounded-xl overflow-hidden">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            <th class="py-6 px-8 text-left text-sm font-bold uppercase tracking-wider w-1/3">Metric</th>
+                            <th class="py-6 px-8 text-left text-sm font-bold uppercase tracking-wider w-1/3 text-slate-400">Cessna Caravan (Turboprop)</th>
+                            <th class="py-6 px-8 text-left text-sm font-bold uppercase tracking-wider w-1/3 text-arctic-orange bg-slate-800">Arctic Mule (Hybrid)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="py-5 px-8 font-bold text-slate-700">Fuel Burn</td>
+                            <td class="py-5 px-8 text-slate-500">45 gal/hr</td>
+                            <td class="py-5 px-8 font-bold text-slate-900 bg-orange-50/30">12 gal/hr <span class="text-xs font-normal text-slate-500">(Avg)</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="py-5 px-8 font-bold text-slate-700">Engine Maintenance</td>
+                            <td class="py-5 px-8 text-slate-500">Every Flight = 1 Cycle</td>
+                            <td class="py-5 px-8 font-bold text-slate-900 bg-orange-50/30">Turbine OFF for short hops <br><span class="text-xs font-normal text-slate-500">(5x Life Extension)</span></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="py-5 px-8 font-bold text-slate-700">Runway Req.</td>
+                            <td class="py-5 px-8 text-slate-500">~2,500 ft</td>
+                            <td class="py-5 px-8 font-bold text-slate-900 bg-orange-50/30">2,500 ft</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="py-5 px-8 font-bold text-slate-700">Cost Per Mile</td>
+                            <td class="py-5 px-8 text-slate-500">$4.50</td>
+                            <td class="py-5 px-8 font-bold text-green-600 bg-orange-50/30">$1.80</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
 
-    <!-- Snowbird Strategy -->
-    <section class="py-24 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-900/20 to-transparent"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-black mb-8">The "Snowbird" Strategy</h2>
-            <div class="text-xl text-slate-300 mb-12">
-                One Airframe. Two Missions.
-            </div>
+    <!-- SECTION 5: FAQ -->
+    <section class="py-24 bg-slate-900 text-white">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Engineering Challenges & FAQ</h2>
             
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 backdrop-blur-sm">
-                    <div class="text-blue-300 text-sm font-bold uppercase tracking-widest mb-2">Winter Season</div>
-                    <h3 class="text-2xl font-bold mb-4">Canadian Arctic</h3>
-                    <p class="text-slate-400">Serving Yellowknife and Nunavut supply chains. Sodium-Ion batteries handle the extreme cold. Diesel/Jet-A backup ensures reliability in blizzards.</p>
-                </div>
-                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700 backdrop-blur-sm">
-                    <div class="text-orange-300 text-sm font-bold uppercase tracking-widest mb-2">Summer Season</div>
-                    <h3 class="text-2xl font-bold mb-4">Caribbean</h3>
-                    <p class="text-slate-400">Island hopping operations. Swap to high-density Lithium packs for maximum range in warm weather. Zero emissions tourism.</p>
-                </div>
+            <div class="space-y-4">
+                <!-- Q1 -->
+                <details class="group bg-slate-800 rounded-lg border border-slate-700 open:border-arctic-orange transition-all duration-300">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg select-none">
+                        <span>Why not just pure electric?</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-arctic-orange"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+                        Infrastructure. The North doesn't have 400kW chargers at every remote strip. We bring our own charger (The Power Pallet). It allows us to operate autonomously in the most remote regions on Earth.
+                    </div>
+                </details>
+
+                <!-- Q2 -->
+                <details class="group bg-slate-800 rounded-lg border border-slate-700 open:border-arctic-orange transition-all duration-300">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg select-none">
+                        <span>How do you handle Balance (W&B)?</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-arctic-orange"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+                        Conventional planes struggle with heavy batteries. Our BWB design allows us to place batteries in the nose to counteract the rear-mounted engines and cargo, creating a naturally stable "Dumbbell" weight distribution that improves longitudinal stability.
+                    </div>
+                </details>
+
+                <!-- Q3 -->
+                <details class="group bg-slate-800 rounded-lg border border-slate-700 open:border-arctic-orange transition-all duration-300">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-lg select-none">
+                        <span>What about deep winter operations?</span>
+                        <span class="transition-transform duration-300 group-open:rotate-180 text-arctic-orange"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-400 leading-relaxed">
+                        Sodium chemistry allows the plane to "hibernate" without damage. When you're ready to fly, the Power Pallet can act as a ground heater, pre-heating the battery loops and cabin for reliable starts even at -40°C.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
